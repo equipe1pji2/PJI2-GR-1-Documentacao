@@ -16,12 +16,9 @@ public class TelaPet
 		 return codPet;
 	}
 	
-	public void informaNome(String nomePet)
+	public void informaNome(String mensagem)
 	{
-		JOptionPane.showMessageDialog(null,"\nNome do pet: " +nomePet );
+		JOptionPane.showMessageDialog(null, mensagem);
 	}
-	public void informaStatus(String statusAdocao)
-	{
-		JOptionPane.showMessageDialog(null,"\n Status: " +statusAdocao );
-	}
+	
 }

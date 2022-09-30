@@ -14,12 +14,12 @@ public class PetController
 		VerificaPet pet = new VerificaPet();
 		
 		
-String nome = pet.verificaExistenciaPet(codigoP);
+String mensagem = pet.verificaExistenciaPet(codigoP);
 		
-	telaEntrada.informaNome(nome);
+	telaEntrada.informaNome(mensagem);
 
-	String Adocao = pet.verificaStatusPet(codigoP);
-	telaEntrada.informaStatus(Adocao);
+	//String Adocao = pet.verificaStatusPet(codigoP);
+	//telaEntrada.informaStatus(petPrincipal.getStatus());
 
 		
 	}

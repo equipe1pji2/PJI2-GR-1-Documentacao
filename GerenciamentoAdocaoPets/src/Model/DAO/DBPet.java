@@ -1,5 +1,7 @@
 package Model.DAO;
 
+import Model.Pets.Pet;
+
 public class DBPet 
 {
 	String codPet1 = "1";
@@ -7,15 +9,15 @@ public class DBPet
 	String codPet3 = "3";
 	String codPet4 = "4";
 	public String statusAdocao;
-	
+	Pet dbPet = new Pet(); 
 /*/
 	public Enum StatusAdocao
 	{
-		APROVADO, EM_ANÁLISE, NEGADO;
+		APROVADO, EM_ANï¿½LISE, NEGADO;
 	} 
 /*/
 	
-	public String acessaDBPet(String codPet)
+	public Pet acessaDBPet(String codPet)
 	{
 		String nomePet;
 		
@@ -29,7 +31,7 @@ public class DBPet
 			if (codPet.equals(codPet2))
 			{
 				nomePet = "Ana";
-				statusAdocao = "Em Análise";
+				statusAdocao = "Em Anï¿½lise";
 			} 	
 			else
 			{
@@ -43,18 +45,23 @@ public class DBPet
 					if (codPet.equals(codPet4))
 					{
 						nomePet = "Lola";
-						statusAdocao = "Em Análise";
+						statusAdocao = "Em Anï¿½lise";
 					}
 					else
 					{
-						nomePet = "Código Inválido";
+						nomePet = "Cï¿½digo Invï¿½lido";
 					}
 				}
 				
 			}
 			
 		}
-		return nomePet;
+		dbPet.setNome(nomePet);
+		dbPet.setStatus(statusAdocao);
+		dbPet.setRaca("Lulu da PomerÃ¢nia");
+		dbPet.setIdade(2);
+		return dbPet;
+		
 	}
 
 }
